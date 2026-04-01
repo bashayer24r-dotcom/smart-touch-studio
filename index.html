@@ -9,153 +9,124 @@
         :root {
             --primary-blue: #4facfe;
             --primary-pink: #f093fb;
-            --dark-bg: #0b0f19;
-            --card-bg: #161b2a;
+            --dark-bg: #0b1120;
+            --card-bg: #1e293b;
         }
 
         body {
             background-color: var(--dark-bg);
             color: white;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
             margin: 0;
-            padding: 0;
-            overflow-x: hidden;
+            direction: rtl;
         }
 
         header {
             text-align: center;
-            padding: 100px 20px;
-            background: radial-gradient(circle at center, #1e293b 0%, #0b0f19 100%);
-            border-bottom: 1px solid rgba(79, 172, 254, 0.2);
+            padding: 80px 20px;
+            background: radial-gradient(circle at center, #1e293b 0%, #0b1120 100%);
         }
 
         .logo-text {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 900;
-            letter-spacing: 2px;
             background: linear-gradient(to right, var(--primary-blue), var(--primary-pink));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-
-        .tagline {
-            font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         .cta-btn {
             display: inline-block;
-            padding: 15px 40px;
+            padding: 12px 35px;
             background: linear-gradient(45deg, var(--primary-blue), var(--primary-pink));
             color: white;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            box-shadow: 0 10px 20px rgba(79, 172, 254, 0.3);
+            box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
         }
 
-        .cta-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 30px rgba(240, 147, 251, 0.4);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 60px 20px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 50px;
-            color: var(--primary-blue);
-        }
+        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
 
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
         }
 
         .portfolio-item {
             background: var(--card-bg);
             border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: 0.4s;
-            position: relative;
             overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: 0.3s;
         }
 
-        .portfolio-item:hover {
-            border-color: var(--primary-blue);
-            transform: translateY(-10px);
-            background: #1c2333;
+        .portfolio-item:hover { transform: translateY(-10px); border-color: var(--primary-pink); }
+
+        /* تنسيق عرض الصور من الملف اللي رفعتيه */
+        .image-container {
+            height: 200px;
+            width: 100%;
+            background-image: url('portfolio.png'); /* تأكدي أن اسم الصورة اللي رفعتيها portfolio.png */
+            background-size: 300% 100%; /* لعرض جزء من الصورة الكبيرة */
+            background-repeat: no-repeat;
         }
 
-        .tag {
-            background: rgba(79, 172, 254, 0.1);
-            color: var(--primary-blue);
-            padding: 5px 12px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
+        .img-1 { background-position: 0% 0%; }    /* الجزء الأول: المواقع */
+        .img-2 { background-position: 50% 0%; }   /* الجزء الثاني: الهوية */
+        .img-3 { background-position: 100% 0%; }  /* الجزء الثالث: البوربوينت */
 
-        h3 { margin: 10px 0; font-size: 1.5rem; }
-        p { color: #94a3b8; line-height: 1.7; }
+        .content { padding: 20px; }
+        .tag { color: var(--primary-pink); font-size: 0.8rem; font-weight: bold; }
+        h3 { margin: 10px 0; }
+        p { color: #94a3b8; font-size: 0.95rem; }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #475569;
-            font-size: 0.9rem;
-        }
-
-        /* تأثيرات إضافية للجوال */
-        @media (max-width: 600px) {
-            .logo-text { font-size: 2rem; }
-            header { padding: 60px 20px; }
-        }
+        footer { text-align: center; padding: 40px; color: #475569; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo-text">Smart Touch Studio</div>
-    <p class="tagline">نبتكر لك حلولاً رقمية ذكية تسبق طموحاتك</p>
-    <!-- استبدل الرقم 966562732339برقم واتسابك الحقيقي -->
-    <a href="https://wa.me/966562732339?text=أهلاً سمارت تاتش، أريد الاستفسار عن خدماتكم" class="cta-btn">تواصل معنا الآن</a>
+    <p>نبتكر لك بصمة رقمية ذكية تليق بطموحك</p>
+    <!-- حطي رقمك هنا بدال الـ 000 -->
+    <a href="https://wa.me/966500000000" class="cta-btn">ابدأ مشروعك معنا</a>
 </header>
 
 <div class="container">
-    <h2>خدماتنا الاحترافية</h2>
+    <h2 style="text-align: center; margin-bottom: 40px;">خدماتنا الاحترافية</h2>
     
     <div class="portfolio-grid">
+        <!-- الخدمة الأولى -->
         <div class="portfolio-item">
-            <span class="tag">WEB & AI</span>
-            <h3>تصميم المواقع الذكية</h3>
-            <p>نبني لك مواقع إلكترونية سريعة، متجاوبة مع الجوال، ومدعومة بأحدث تقنيات الذكاء الاصطناعي.</p>
+            <div class="image-container img-1"></div>
+            <div class="content">
+                <span class="tag">WEB & AI</span>
+                <h3>تصميم المواقع الذكية</h3>
+                <p>مواقع متجاوبة، سريعة، ومدعومة بالذكاء الاصطناعي لتطوير أعمالك.</p>
+            </div>
         </div>
 
+        <!-- الخدمة الثانية -->
         <div class="portfolio-item">
-            <span class="tag">DESIGN</span>
-            <h3>الهوية البصرية</h3>
-            <p>تصميم بروفايلات، بوستات، وشعارات تعكس احترافية مشروعك وتجذب عملائك من النظرة الأولى.</p>
+            <div class="image-container img-2"></div>
+            <div class="content">
+                <span class="tag">DESIGN</span>
+                <h3>الهوية البصرية</h3>
+                <p>نصمم لك هوية بصرية كاملة (بوستات، شعارات) تعكس تميزك.</p>
+            </div>
         </div>
 
+        <!-- الخدمة الثالثة -->
         <div class="portfolio-item">
-            <span class="tag">PRESENTATION</span>
-            <h3>عروض البوربوينت</h3>
-            <p>تحويل أفكارك ومعلوماتك إلى عروض تقديمية تفاعلية ومبهرة للمستثمرين والعملاء.</p>
+            <div class="image-container img-3"></div>
+            <div class="content">
+                <span class="tag">PRESENTATION</span>
+                <h3>عروض البوربوينت</h3>
+                <p>تحويل أفكارك إلى عروض تقديمية بصرية احترافية ومقنعة.</p>
+            </div>
         </div>
     </div>
 </div>
