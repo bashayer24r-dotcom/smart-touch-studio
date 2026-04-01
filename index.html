@@ -45,6 +45,7 @@
             border-radius: 50px;
             font-weight: bold;
             box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+            transition: 0.3s;
         }
 
         .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
@@ -63,27 +64,25 @@
             transition: 0.3s;
         }
 
-        .portfolio-item:hover { transform: translateY(-10px); border-color: var(--primary-pink); }
-
-        /* تنسيق عرض الصور من الملف اللي رفعتيه */
+        /* هنا الربط مع صورتك IMG_1455.jpeg */
         .image-container {
-            height: 200px;
+            height: 220px;
             width: 100%;
-            background-image: url('portfolio.png'); /* تأكدي أن اسم الصورة اللي رفعتيها portfolio.png */
-            background-size: 300% 100%; /* لعرض جزء من الصورة الكبيرة */
+            background-image: url('IMG_1455.jpeg'); 
+            background-size: 300% 100%;
             background-repeat: no-repeat;
         }
 
-        .img-1 { background-position: 0% 0%; }    /* الجزء الأول: المواقع */
-        .img-2 { background-position: 50% 0%; }   /* الجزء الثاني: الهوية */
-        .img-3 { background-position: 100% 0%; }  /* الجزء الثالث: البوربوينت */
+        .img-1 { background-position: 0% 0%; }    
+        .img-2 { background-position: 50% 0%; }   
+        .img-3 { background-position: 100% 0%; }  
 
         .content { padding: 20px; }
         .tag { color: var(--primary-pink); font-size: 0.8rem; font-weight: bold; }
-        h3 { margin: 10px 0; }
-        p { color: #94a3b8; font-size: 0.95rem; }
+        h3 { margin: 10px 0; font-size: 1.4rem; }
+        p { color: #94a3b8; font-size: 0.95rem; line-height: 1.6; }
 
-        footer { text-align: center; padding: 40px; color: #475569; }
+        footer { text-align: center; padding: 40px; color: #475569; border-top: 1px solid #1e293b; margin-top: 50px; }
     </style>
 </head>
 <body>
@@ -91,41 +90,37 @@
 <header>
     <div class="logo-text">Smart Touch Studio</div>
     <p>نبتكر لك بصمة رقمية ذكية تليق بطموحك</p>
-    <!-- حطي رقمك هنا بدال الـ 000 -->
-    <a href="https://wa.me/966500000000" class="cta-btn">ابدأ مشروعك معنا</a>
+    <a href="https://wa.me/966500000000" class="cta-btn">تواصل معنا الآن</a>
 </header>
 
 <div class="container">
     <h2 style="text-align: center; margin-bottom: 40px;">خدماتنا الاحترافية</h2>
     
     <div class="portfolio-grid">
-        <!-- الخدمة الأولى -->
         <div class="portfolio-item">
             <div class="image-container img-1"></div>
             <div class="content">
                 <span class="tag">WEB & AI</span>
                 <h3>تصميم المواقع الذكية</h3>
-                <p>مواقع متجاوبة، سريعة، ومدعومة بالذكاء الاصطناعي لتطوير أعمالك.</p>
+                <p>نبني لك مواقع إلكترونية سريعة، متجاوبة مع الجوال، ومدعومة بأحدث تقنيات الذكاء الاصطناعي.</p>
             </div>
         </div>
 
-        <!-- الخدمة الثانية -->
         <div class="portfolio-item">
             <div class="image-container img-2"></div>
             <div class="content">
                 <span class="tag">DESIGN</span>
                 <h3>الهوية البصرية</h3>
-                <p>نصمم لك هوية بصرية كاملة (بوستات، شعارات) تعكس تميزك.</p>
+                <p>نصمم لك شعارات وهويات بصرية متكاملة تعبر عن جوهر مشروعك بلمسة عصرية.</p>
             </div>
         </div>
 
-        <!-- الخدمة الثالثة -->
         <div class="portfolio-item">
             <div class="image-container img-3"></div>
             <div class="content">
                 <span class="tag">PRESENTATION</span>
                 <h3>عروض البوربوينت</h3>
-                <p>تحويل أفكارك إلى عروض تقديمية بصرية احترافية ومقنعة.</p>
+                <p>نحول بياناتك وأفكارك إلى عرض بصري مذهل يساعدك على إقناع جمهورك واحتلال الصدارة.</p>
             </div>
         </div>
     </div>
