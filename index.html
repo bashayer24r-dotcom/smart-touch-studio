@@ -1,0 +1,118 @@
+<header>
+    <div class="logo-text">SMART TOUCH STUDIO</div>
+    <p>نصمم لك بصمة رقمية ذكية تليق بطموحك</p>
+    <a href="#" class="cta-btn">ابدأ مشروعك معنا</a>
+</header>
+
+<div class="container">
+    <h2>خدماتنا الاحترافية</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <div class="portfolio-info">
+                <span class="tag">Web & AI</span>
+                <h3>تصميم المواقع</h3>
+                <p>بناء مواقع ذكية متوافقة مع جميع الأجهزة.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-info">
+                <span class="tag">Design</span>
+                <h3>البوستات والدعوات</h3>
+                <p>تصاميم عصرية تعكس هوية مناسباتك وأعمالك.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <div class="portfolio-info">
+                <span class="tag">Presentation</span>
+                <h3>عروض البوربوينت</h3>
+                <p>تحويل أفكارك إلى عرض بصري احترافي وجذاب.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+/* ألوان وتنسيقات Smart Touch Studio */
+:root {
+    --primary-blue: #4facfe;
+    --primary-pink: #f093fb;
+    --dark-bg: #0f172a;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    direction: rtl;
+    margin: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+    border-bottom: 2px solid rgba(79, 172, 254, 0.3);
+}
+
+.logo-text {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(to right, var(--primary-blue), var(--primary-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+
+h2 { text-align: center; color: var(--primary-blue); margin-bottom: 30px; }
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item {
+    background: #1e293b;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-item:hover {
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 25px rgba(240, 147, 251, 0.2);
+    transform: translateY(-10px);
+}
+
+.tag { 
+    color: var(--primary-pink); 
+    font-size: 0.75rem; 
+    font-weight: bold; 
+    text-transform: uppercase;
+    border: 1px solid var(--primary-pink);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 35px;
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-pink));
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.4);
+}
+
+/* تنسيق للجوال */
+@media (max-width: 600px) {
+    .logo-text { font-size: 1.8rem; }
+}
+</style>
